@@ -1,0 +1,320 @@
+.action-node {
+  background: #2d2d2d;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  min-width: 200px;
+  max-width: 300px;
+  font-size: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+
+.action-node.selected {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-width: 3px;
+}
+
+.action-node-header {
+  padding: 8px 12px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 6px 6px 0 0;
+}
+
+.action-node-icon {
+  font-size: 16px;
+}
+
+.action-node-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.action-node-content {
+  padding: 80px 12px 10px 12px; /* 大幅增加顶部padding为锚点留出足够空间 */
+  background: #2d2d2d;
+  border-radius: 0 0 6px 6px;
+  min-height: 120px; /* 增加最小高度，确保有足够空间显示标签 */
+  overflow: visible; /* 改为visible避免因标签导致滚动条 */
+}
+
+.action-node-line {
+  padding: 3px 0;
+  color: #e0e0e0;
+  font-size: 11px;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.action-node-line:last-child {
+  border-bottom: none;
+}
+
+/* 句柄样式 - 统一使用 node-handle */
+.action-node .node-handle {
+  width: 12px;
+  height: 12px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+
+.action-node .node-handle-input {
+  left: -6px;
+}
+
+.action-node .node-handle-output {
+  right: -6px;
+}
+
+.action-node .node-handle:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* 连接时高亮 */
+.action-node .react-flow__handle-connecting {
+  background: #4CAF50 !important;
+  animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+}
+
+/* ========== 句柄标签样式 ========== */
+.handle-label {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 500;
+  color: #e0e0e0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+  line-height: 1.2;
+}
+
+.handle-label-left {
+  left: 18px;
+  transform: translateY(-50%);
+}
+
+.handle-label-right {
+  right: 18px;
+  transform: translateY(-50%);
+}
+
+/* ========== 编辑模式样式 ========== */
+.action-node.editing-mode {
+  min-height: 350px;
+  width: 420px;
+}
+
+.action-node .edit-mode-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.action-node .edit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.action-node .edit-field label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #333;
+}
+
+.action-node .edit-field input,
+.action-node .edit-field textarea,
+.action-node .edit-field select {
+  width: 100%;
+  padding: 8px 10px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #333;
+  font-size: 13px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  transition: border-color 0.2s;
+}
+
+.action-node .edit-field input:focus,
+.action-node .edit-field textarea:focus,
+.action-node .edit-field select:focus {
+  outline: none;
+  border-color: #007acc;
+  background: #f9f9f9;
+}
+
+.action-node .edit-field textarea {
+  resize: vertical;
+  min-height: 60px;
+}
+
+.action-node .edit-field small {
+  font-size: 11px;
+  color: #666;
+  font-style: italic;
+}
+
+.action-node .edit-field-row {
+  display: flex;
+  gap: 10px;
+}
+
+.action-node .edit-field-row .edit-field {
+  flex: 1;
+}
+
+.action-node .edit-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.action-node .save-button,
+.action-node .cancel-button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-node .save-button {
+  background: #4CAF50;
+  color: white;
+}
+
+.action-node .save-button:hover {
+  background: #45a049;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+}
+
+.action-node .cancel-button {
+  background: #f44336;
+  color: white;
+}
+
+.action-node .cancel-button:hover {
+  background: #da190b;
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.3);
+}
+
+.action-node .edit-hint {
+  font-size: 11px;
+  color: #888;
+  text-align: center;
+  margin-top: 8px;
+  font-style: italic;
+}
+
+/* ========== 代码标签样式 ========== */
+.tag-label {
+  font-size: 11px;
+  color: #b0b0b0;
+  margin-right: 6px;
+}
+
+.tag-list {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+
+.code-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  cursor: default;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.code-tag:hover {
+  transform: scale(1.15);
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.code-tag-detail {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  white-space: nowrap;
+  pointer-events: none;
+  margin-bottom: 4px;
+  z-index: 1000;
+}
+
+.code-tag-detail::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+/* 各类型标签的颜色 */
+.tag-cosplay {
+  background: #e91e63;
+  color: white;
+}
+
+.tag-toy {
+  background: #9c27b0;
+  color: white;
+}
+
+.tag-item {
+  background: #2196f3;
+  color: white;
+}
+
+.tag-coat {
+  background: #ff9800;
+  color: white;
+}
+
+.tag-more {
+  background: #757575;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+}
+

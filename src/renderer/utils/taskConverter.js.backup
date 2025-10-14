@@ -1,0 +1,541 @@
+// 塞雷卡任务JSON导入导出工具
+
+export class SerekaTaskConverter {
+  // 将编辑器节点转换为塞雷卡JSON格式
+  static toSerekaJSON(nodes, edges) {
+    const result = {
+      title: '',
+      description: '',
+      listmission: true,
+      addtitleinlist: false,
+      addtitleinpanel: false,
+      zones: [],
+      checkpoints: [],
+      dialogue_nodes: [],
+      subconditions: [],
+      editorPositions: []
+    };
+
+    // 按节点类型分类处理
+    nodes.forEach(node => {
+      // ZoneContainer节点特殊处理
+      if (node.type === 'zoneContainer') {
+        if (node.data.zones && node.data.zones.length > 0) {
+          node.data.zones.forEach(zone => {
+            result.zones.push({
+              id: zone.id,
+              areas: [{
+                type: zone.areaType || 'sphere',
+                stage: zone.stage || 'Apart',
+                x: zone.x || 0,
+                y: zone.y || 0,
+                z: zone.z || 0,
+                r: zone.r || 0.5,
+                outlinehidden: zone.outlinehidden || false,
+                compasshidden: zone.compasshidden || false,
+                visualGuides: zone.ringEnabled ? {
+                  ringEffect: {
+                    enabled: true,
+                    color: zone.ringColor || { r: 0, g: 1, b: 0, a: 0.8 },
+                    radius: zone.r || 0.5
+                  }
+                } : undefined
+              }]
+            });
+          });
+        }
+        
+        // 保存容器位置
+        result.editorPositions.push({
+          id: 'zone_container',
+          x: Math.round(node.position.x),
+          y: Math.round(node.position.y)
+        });
+        return;
+      }
+
+      const { nodeTemplate, formData } = node.data;
+      
+      switch (nodeTemplate.type) {
+        case 'missionInfo':
+          result.title = formData.title || '';
+          result.description = formData.description || '';
+          result.listmission = formData.listmission !== undefined ? formData.listmission : true;
+          result.addtitleinlist = formData.addtitleinlist || false;
+          result.addtitleinpanel = formData.addtitleinpanel || false;
+          result.stage = formData.stage || 'Apart';
+          break;
+
+        case 'teleport':
+          result.startPosition = {
+            stage: formData.stage || 'Apart',
+            x: formData.x || 0,
+            y: formData.y || 0,
+            z: formData.z || 0,
+            description: formData.description || '任务传送起点'
+          };
+          break;
+
+        case 'zone':
+          // 保留对旧格式的支持
+          result.zones.push({
+            id: formData.id || `zone_${node.id}`,
+            areas: [{
+              type: formData.areaType || 'sphere',
+              stage: formData.stage || 'Apart',
+              x: formData.x || 0,
+              y: formData.y || 0,
+              z: formData.z || 0,
+              r: formData.r || 0.5,
+              outlinehidden: formData.outlinehidden || false,
+              compasshidden: formData.compasshidden || false,
+              visualGuides: formData.ringEnabled ? {
+                ringEffect: {
+                  enabled: true,
+                  color: formData.ringColor || { r: 0, g: 1, b: 0, a: 0.8 },
+                  radius: formData.r || 0.5
+                }
+              } : undefined
+            }]
+          });
+          break;
+
+        case 'checkpoint':
+          result.checkpoints.push({
+            id: formData.id || `node_${node.id}`,
+            zone: formData.zone || '',
+            condition: {
+              condition: formData.condition || '',
+              description: formData.description || '',
+              duration: formData.duration || 1,
+              rp: formData.rp || 0,
+              reset: formData.reset !== undefined ? formData.reset : true,
+              hidepanel: formData.hidepanel || ''
+            },
+            nextcheckpoint: formData.nextcheckpoint || ''
+          });
+          break;
+
+        case 'dialogue':
+          result.dialogue_nodes.push({
+            id: formData.id || `dialogue_${node.id}`,
+            lines: formData.lines || [],
+            nextcheckpoint: formData.nextcheckpoint || ''
+          });
+          break;
+
+        case 'condition':
+          result.subconditions.push({
+            id: formData.id || `condition_${node.id}`,
+            condition: formData.condition || ''
+          });
+          break;
+      }
+
+      // 保存编辑器中的节点位置
+      result.editorPositions.push({
+        id: formData.id || node.id,
+        x: Math.round(node.position.x),
+        y: Math.round(node.position.y)
+      });
+    });
+
+    // 清理空数组
+    if (result.zones.length === 0) delete result.zones;
+    if (result.checkpoints.length === 0) delete result.checkpoints;
+    if (result.dialogue_nodes.length === 0) delete result.dialogue_nodes;
+    if (result.subconditions.length === 0) delete result.subconditions;
+
+    return result;
+  }
+
+  // 从塞雷卡JSON格式转换为编辑器节点
+  static fromSerekaJSON(json) {
+    const nodes = [];
+    const edges = [];
+    let nodeIdCounter = 1;
+    
+    // 布局配置
+    const layout = {
+      startX: 50,
+      startY: 50,
+      nodeWidth: 300,
+      nodeHeight: 180,
+      horizontalSpacing: 150,
+      verticalSpacing: 120,
+      
+      // 区域布局
+      zoneContainerX: 50,
+      zoneContainerY: 50,
+      zoneContainerWidth: 800,
+      zoneContainerHeight: 300,
+      
+      // 子条件布局
+      subConditionX: 900,
+      subConditionY: 50,
+      subConditionWidth: 700,
+      subConditionHeight: 250,
+      
+      // 任务信息布局
+      missionInfoX: 50,
+      missionInfoY: 400,
+      
+      // 传送点布局
+      teleportX: 400,
+      teleportY: 400,
+      
+      // 检查点流程起点
+      checkpointStartX: 50,
+      checkpointStartY: 650
+    };
+
+    // 提取编辑器位置信息（如果有）
+    const editorPositions = json.editorPositions || [];
+    const hasEditorPositions = editorPositions.length > 0;
+    
+    const getPosition = (id, defaultX, defaultY) => {
+      if (!hasEditorPositions) return { x: defaultX, y: defaultY };
+      const pos = editorPositions.find(p => p.id === id);
+      return pos ? { x: pos.x, y: pos.y } : { x: defaultX, y: defaultY };
+    };
+
+    // 1. 创建地点容器节点（矩形网格布局）
+    if (json.zones && json.zones.length > 0) {
+      const zoneContainerId = `zone_container_${nodeIdCounter++}`;
+      
+      const zonesData = json.zones.map((zone) => {
+        const area = zone.areas[0];
+        return {
+          id: zone.id,
+          stage: area.stage,
+          x: area.x,
+          y: area.y,
+          z: area.z,
+          r: area.r,
+          areaType: area.type,
+          outlinehidden: area.outlinehidden,
+          compasshidden: area.compasshidden,
+          ringEnabled: area.visualGuides?.ringEffect?.enabled || false,
+          ringColor: area.visualGuides?.ringEffect?.color || { r: 0, g: 1, b: 0, a: 0.8 }
+        };
+      });
+      
+      const zoneContainerNode = {
+        id: zoneContainerId,
+        type: 'zoneContainer',
+        position: getPosition('zone_container', layout.zoneContainerX, layout.zoneContainerY),
+        style: { width: layout.zoneContainerWidth, height: layout.zoneContainerHeight },
+        data: {
+          zones: zonesData,
+          label: '地点列表'
+        }
+      };
+      nodes.push(zoneContainerNode);
+    }
+
+    // 2. 创建子条件容器节点（矩形网格布局）
+    if (json.subconditions && json.subconditions.length > 0) {
+      const subCondContainerId = `subcond_container_${nodeIdCounter++}`;
+      
+      const subConditionsData = json.subconditions.map((subcond) => ({
+        id: subcond.id,
+        condition: subcond.condition
+      }));
+      
+      const subCondContainerNode = {
+        id: subCondContainerId,
+        type: 'subConditionContainer',
+        position: getPosition('subcond_container', layout.subConditionX, layout.subConditionY),
+        style: { width: layout.subConditionWidth, height: layout.subConditionHeight },
+        data: {
+          subconditions: subConditionsData,
+          label: '子条件列表'
+        }
+      };
+      nodes.push(subCondContainerNode);
+    }
+
+    // 3. 创建任务信息节点
+    if (json.title || json.description) {
+      const missionNode = {
+        id: `${nodeIdCounter++}`,
+        type: 'serekaTaskNode',
+        position: getPosition('mission_info', layout.missionInfoX, layout.missionInfoY),
+        data: {
+          nodeTemplate: {
+            type: 'missionInfo',
+            category: '基础设置',
+            label: '任务信息',
+            icon: '📋',
+            color: '#4CAF50',
+            fields: []
+          },
+          formData: {
+            title: json.title || '',
+            description: json.description || '',
+            listmission: json.listmission,
+            addtitleinlist: json.addtitleinlist,
+            addtitleinpanel: json.addtitleinpanel,
+            stage: json.stage || 'Apart'
+          }
+        }
+      };
+      nodes.push(missionNode);
+    }
+
+    // 4. 创建传送点节点
+    if (json.startPosition) {
+      const teleportNode = {
+        id: `${nodeIdCounter++}`,
+        type: 'serekaTaskNode',
+        position: getPosition('start_position', layout.teleportX, layout.teleportY),
+        data: {
+          nodeTemplate: {
+            type: 'teleport',
+            category: '传送点',
+            label: '传送点',
+            icon: '🌀',
+            color: '#9C27B0',
+            fields: []
+          },
+          formData: json.startPosition
+        }
+      };
+      nodes.push(teleportNode);
+    }
+
+    // 5. 创建检查点流程（线性或分支布局）
+    const checkpointMap = {};
+    
+    if (json.checkpoints && json.checkpoints.length > 0) {
+        inDegree[cp.id] = 0;
+      });
+      
+      checkpoints.forEach(cp => {
+        if (cp.nextcheckpoint) {
+          graph[cp.id].push(cp.nextcheckpoint);
+          inDegree[cp.nextcheckpoint] = (inDegree[cp.nextcheckpoint] || 0) + 1;
+        }
+      });
+      
+      return { graph, inDegree };
+    };
+    
+    // 辅助函数：查找起始节点（没有前驱的节点）
+    const findStartNodes = (checkpoints, inDegree) => {
+      return checkpoints.filter(cp => inDegree[cp.id] === 0).map(cp => cp.id);
+    };
+    
+    // 辅助函数：拓扑排序并分层
+    const topologicalSort = (checkpoints) => {
+      const { graph, inDegree } = buildDependencyGraph(checkpoints);
+      const startNodes = findStartNodes(checkpoints, inDegree);
+      
+      const layers = [];
+      const visited = new Set();
+      const queue = startNodes.map(id => ({ id, layer: 0 }));
+      
+      while (queue.length > 0) {
+        const { id, layer } = queue.shift();
+        if (visited.has(id)) continue;
+        
+        visited.add(id);
+        
+        if (!layers[layer]) layers[layer] = [];
+        layers[layer].push(id);
+        
+        const nextNodes = graph[id] || [];
+        nextNodes.forEach(nextId => {
+          if (!visited.has(nextId)) {
+            queue.push({ id: nextId, layer: layer + 1 });
+          }
+        });
+      }
+      
+      return layers;
+    };
+    
+    if (json.checkpoints && json.checkpoints.length > 0) {
+      // 构建检查点分层结构
+      const layers = topologicalSort(json.checkpoints);
+      const checkpointById = {};
+      json.checkpoints.forEach(cp => checkpointById[cp.id] = cp);
+      
+      let flowX = layout.flowStartX;
+      
+      layers.forEach((layer, layerIndex) => {
+        const layerY = layout.startY;
+        const nodesInLayer = layer.length;
+        
+        layer.forEach((checkpointId, indexInLayer) => {
+          const checkpoint = checkpointById[checkpointId];
+          if (!checkpoint) return;
+          
+          const nodeId = `${nodeIdCounter++}`;
+          checkpointMap[checkpoint.id] = nodeId;
+          
+          // 计算Y坐标：如果有多个节点在同一层，垂直分布
+          let y = layerY;
+          if (nodesInLayer > 1) {
+            // 分支情况：垂直分散
+            const totalHeight = (nodesInLayer - 1) * (layout.nodeHeight + layout.verticalSpacing);
+            const startY = layerY - totalHeight / 2;
+            y = startY + indexInLayer * (layout.nodeHeight + layout.verticalSpacing);
+          }
+          
+          const checkpointNode = {
+            id: nodeId,
+            type: 'serekaTaskNode',
+            position: getPosition(checkpoint.id, flowX, y),
+            data: {
+              nodeTemplate: {
+                type: 'checkpoint',
+                category: '检查点',
+                label: '检查点',
+                icon: '✅',
+                color: '#FF9800',
+                fields: []
+              },
+              formData: {
+                id: checkpoint.id,
+                zone: checkpoint.zone,
+                description: checkpoint.condition?.description || '',
+                condition: checkpoint.condition?.condition || '',
+                duration: checkpoint.condition?.duration || 1,
+                rp: checkpoint.condition?.rp || 0,
+                reset: checkpoint.condition?.reset,
+                hidepanel: checkpoint.condition?.hidepanel || '',
+                nextcheckpoint: checkpoint.nextcheckpoint || ''
+              }
+            }
+          };
+          nodes.push(checkpointNode);
+        });
+        
+        flowX += layout.nodeWidth + layout.horizontalSpacing;
+      });
+    }
+
+    // 5. 创建对话节点（插入到流程图中）
+    if (json.dialogue_nodes && json.dialogue_nodes.length > 0) {
+      // 对话节点需要根据它们在流程中的位置来布局
+      json.dialogue_nodes.forEach((dialogue) => {
+        const nodeId = `${nodeIdCounter++}`;
+        dialogueMap[dialogue.id] = nodeId;
+        
+        // 查找引用此对话的检查点，放在其附近
+        let posX = layout.flowStartX;
+        let posY = layout.startY + 200;
+        
+        // 尝试找到引用此对话的前置节点
+        if (json.checkpoints) {
+          const refCheckpoint = json.checkpoints.find(cp => cp.nextcheckpoint === dialogue.id);
+          if (refCheckpoint && checkpointMap[refCheckpoint.id]) {
+            const refNode = nodes.find(n => n.id === checkpointMap[refCheckpoint.id]);
+            if (refNode) {
+              posX = refNode.position.x + layout.nodeWidth + layout.horizontalSpacing;
+              posY = refNode.position.y;
+            }
+          }
+        }
+        
+        const dialogueNode = {
+          id: nodeId,
+          type: 'serekaTaskNode',
+          position: getPosition(dialogue.id, posX, posY),
+          data: {
+            nodeTemplate: {
+              type: 'dialogue',
+              category: '对话节点',
+              label: '对话节点',
+              icon: '💬',
+              color: '#E91E63',
+              fields: []
+            },
+            formData: {
+              id: dialogue.id,
+              lines: dialogue.lines || [],
+              nextcheckpoint: dialogue.nextcheckpoint || ''
+            }
+          }
+        };
+        nodes.push(dialogueNode);
+      });
+    }
+
+    // 6. 创建子条件节点（放在左下角）
+    if (json.subconditions && json.subconditions.length > 0) {
+      let condY = layout.startY + 400;
+      json.subconditions.forEach((condition, index) => {
+        const nodeId = `${nodeIdCounter++}`;
+        
+        const conditionNode = {
+          id: nodeId,
+          type: 'serekaTaskNode',
+          position: getPosition(condition.id, layout.startX, condY + index * (layout.nodeHeight + layout.verticalSpacing)),
+          data: {
+            nodeTemplate: {
+              type: 'condition',
+              category: '条件判断',
+              label: '子条件',
+              icon: '🔀',
+              color: '#00BCD4',
+              fields: []
+            },
+            formData: {
+              id: condition.id,
+              condition: condition.condition
+            }
+          }
+        };
+        nodes.push(conditionNode);
+      });
+    }
+
+    // 7. 创建流程连接（基于nextcheckpoint）
+    const allNodeMap = { ...checkpointMap, ...dialogueMap };
+    
+    // 检查点之间的流程连接
+    if (json.checkpoints) {
+      json.checkpoints.forEach(checkpoint => {
+        const sourceId = checkpointMap[checkpoint.id];
+        if (checkpoint.nextcheckpoint && sourceId) {
+          const targetId = allNodeMap[checkpoint.nextcheckpoint];
+          if (targetId) {
+            edges.push({
+              id: `e-flow-${sourceId}-${targetId}`,
+              source: sourceId,
+              target: targetId,
+              type: 'smoothstep',
+              animated: true,
+              style: { stroke: '#4CAF50', strokeWidth: 2 },
+              label: '下一步'
+            });
+          }
+        }
+      });
+    }
+    
+    // 对话节点的流程连接
+    if (json.dialogue_nodes) {
+      json.dialogue_nodes.forEach(dialogue => {
+        const sourceId = dialogueMap[dialogue.id];
+        if (dialogue.nextcheckpoint && sourceId) {
+          const targetId = allNodeMap[dialogue.nextcheckpoint];
+          if (targetId) {
+            edges.push({
+              id: `e-flow-${sourceId}-${targetId}`,
+              source: sourceId,
+              target: targetId,
+              type: 'smoothstep',
+              animated: true,
+              style: { stroke: '#E91E63', strokeWidth: 2 }
+            });
+          }
+        }
+      });
+    }
+
+    return { nodes, edges };
+  }
+}

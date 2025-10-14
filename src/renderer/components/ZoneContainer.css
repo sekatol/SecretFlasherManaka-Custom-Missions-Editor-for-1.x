@@ -1,0 +1,173 @@
+.zone-container {
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 150, 243, 0.05);
+  border: 2px dashed #2196F3;
+  border-radius: 12px;
+  padding: 16px;
+  overflow: visible;
+  position: relative;
+  z-index: 0;
+}
+
+.zone-container-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(33, 150, 243, 0.3);
+}
+
+.zone-icon {
+  font-size: 24px;
+}
+
+.zone-title {
+  flex: 1;
+  font-size: 15px;
+  font-weight: 600;
+  color: #2196F3;
+}
+
+.zone-count {
+  font-size: 12px;
+  color: #888888;
+  background: rgba(33, 150, 243, 0.2);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.zone-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+  overflow: visible;
+}
+
+.zone-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px 20px;
+  color: #888888;
+}
+
+.zone-empty p {
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+
+.zone-empty small {
+  font-size: 12px;
+  color: #666666;
+}
+
+.zone-card {
+  background: #2d2d2d;
+  border: 2px solid #404040;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.zone-card:hover,
+.zone-card.hovered {
+  border-color: #2196F3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.zone-card.selected {
+  border-color: #4CAF50;
+  background: rgba(76, 175, 80, 0.1);
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}
+
+.zone-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #404040;
+}
+
+.zone-card-icon {
+  font-size: 16px;
+}
+
+.zone-card-id {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e0e0e0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.zone-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.zone-info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.zone-label {
+  color: #888888;
+  font-weight: 500;
+}
+
+.zone-value {
+  color: #cccccc;
+  font-family: 'Courier New', monospace;
+}
+
+.zone-ring-indicator {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding-top: 6px;
+  border-top: 1px solid #404040;
+  font-size: 10px;
+  color: #888888;
+}
+
+.zone-ring-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #404040;
+  flex-shrink: 0;
+}
+
+/* 滚动条样式 */
+.zone-grid::-webkit-scrollbar,
+.zone-container::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.zone-grid::-webkit-scrollbar-track,
+.zone-container::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.zone-grid::-webkit-scrollbar-thumb,
+.zone-container::-webkit-scrollbar-thumb {
+  background: rgba(33, 150, 243, 0.4);
+  border-radius: 3px;
+}
+
+.zone-grid::-webkit-scrollbar-thumb:hover,
+.zone-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(33, 150, 243, 0.6);
+}

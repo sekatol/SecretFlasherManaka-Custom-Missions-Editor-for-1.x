@@ -1,0 +1,303 @@
+import React, { useCallback, useState, useRef } from 'react';
+import ReactFlow, {
+  MiniMap,
+  Controls,
+  Background,
+  useNodesState,
+  useEdgesState,
+  addEdge,
+  Panel,
+} from 'reactflow';
+import 'reactflow/dist/style.css';
+
+import SerekaTaskNode from './components/SerekaTaskNode';
+import ZoneContainer from './components/ZoneContainer';
+import SubConditionContainer from './components/SubConditionContainer';
+import CategorySidebar from './components/CategorySidebar';
+import PropertyPanel from './components/PropertyPanel';
+import TabBar from './components/TabBar';
+import { SerekaTaskConverter } from './utils/taskConverter';
+import './App.css';
+
+const nodeTypes = {
+  serekaTaskNode: SerekaTaskNode,
+  zoneContainer: ZoneContainer,
+  subConditionContainer: SubConditionContainer,
+};
+
+function App() {
+  // 多标签页状态
+  const [tabs, setTabs] = useState([
+    { id: 1, name: '未命名任务', nodes: [], edges: [] }
+  ]);
+  const [activeTabId, setActiveTabId] = useState(1);
+  const tabIdCounter = useRef(2);
+  
+  // 当前标签页的数据
+  const activeTab = tabs.find(t => t.id === activeTabId) || tabs[0];
+  const [nodes, setNodes, onNodesChange] = useNodesState(activeTab.nodes);
+  const [edges, setEdges, onEdgesChange] = useEdgesState(activeTab.edges);
+  
+  const [selectedNode, setSelectedNode] = useState(null);
+  const [showPropertyPanel, setShowPropertyPanel] = useState(false);
+  const fileInputRef = useRef(null);
+  let nodeIdCounter = useRef(1);
+
+  // 同步当前标签页的nodes和edges到tabs状态
+  const syncCurrentTab = useCallback(() => {
+    setTabs(prevTabs => prevTabs.map(tab => 
+      tab.id === activeTabId ? { ...tab, nodes, edges } : tab
+    ));
+  }, [activeTabId, nodes, edges]);
+
+  // 监听nodes和edges变化，同步到tabs
+  React.useEffect(() => {
+    syncCurrentTab();
+  }, [nodes, edges]);
+
+  // 标签页操作
+  const handleNewTab = useCallback(() => {
+    const newTab = {
+      id: tabIdCounter.current++,
+      name: '未命名任务',
+      nodes: [],
+      edges: []
+    };
+    setTabs(prev => [...prev, newTab]);
+    setActiveTabId(newTab.id);
+    setNodes([]);
+    setEdges([]);
+  }, [setNodes, setEdges]);
+
+  const handleTabClick = useCallback((tabId) => {
+    const tab = tabs.find(t => t.id === tabId);
+    if (tab) {
+      setActiveTabId(tabId);
+      setNodes(tab.nodes);
+      setEdges(tab.edges);
+      setSelectedNode(null);
+      setShowPropertyPanel(false);
+    }
+  }, [tabs, setNodes, setEdges]);
+
+  const handleTabClose = useCallback((tabId) => {
+    if (tabs.length === 1) return; // 至少保留一个标签页
+    
+    const newTabs = tabs.filter(t => t.id !== tabId);
+    setTabs(newTabs);
+    
+    if (activeTabId === tabId) {
+      const newActiveTab = newTabs[0];
+      setActiveTabId(newActiveTab.id);
+      setNodes(newActiveTab.nodes);
+      setEdges(newActiveTab.edges);
+    }
+  }, [tabs, activeTabId, setNodes, setEdges]);
+
+  const onConnect = useCallback(
+    (params) => setEdges((eds) => addEdge({ ...params, type: 'smoothstep' }, eds)),
+    [setEdges]
+  );
+
+  const onAddNode = useCallback((nodeTemplate) => {
+    const newNode = {
+      id: `node_${nodeIdCounter.current++}`,
+      type: 'serekaTaskNode',
+      position: {
+        x: Math.random() * 300 + 250,
+        y: Math.random() * 300 + 100,
+      },
+      data: {
+        nodeTemplate: nodeTemplate,
+        formData: nodeTemplate.fields.reduce((acc, field) => {
+          acc[field.name] = field.default;
+          return acc;
+        }, {})
+      },
+    };
+    setNodes((nds) => nds.concat(newNode));
+  }, [setNodes]);
+
+  const onAddCustomNode = useCallback(() => {
+    alert('自定义节点功能即将推出！\n您可以在这里创建自己的节点类型。');
+  }, []);
+
+  const onNodeClick = useCallback((event, node) => {
+    setSelectedNode(node);
+    setShowPropertyPanel(true);
+  }, []);
+
+  const onPaneClick = useCallback(() => {
+    setSelectedNode(null);
+    setShowPropertyPanel(false);
+  }, []);
+
+  const onUpdateNode = useCallback((nodeId, formData) => {
+    setNodes((nds) =>
+      nds.map((node) => {
+        if (node.id === nodeId) {
+          return {
+            ...node,
+            data: {
+              ...node.data,
+              formData: formData,
+            },
+          };
+        }
+        return node;
+      })
+    );
+  }, [setNodes]);
+
+  const onSaveWorkflow = useCallback(() => {
+    const serekaJSON = SerekaTaskConverter.toSerekaJSON(nodes, edges);
+    const jsonString = JSON.stringify(serekaJSON, null, 2);
+    
+    // 下载JSON文件
+    const blob = new Blob([jsonString], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${serekaJSON.title || '塞雷卡任务'}_${Date.now()}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+    
+    console.log('保存的任务JSON:', serekaJSON);
+    alert('任务已导出为JSON文件！');
+  }, [nodes, edges]);
+
+  const onLoadWorkflow = useCallback(() => {
+    fileInputRef.current?.click();
+  }, []);
+
+  const handleFileLoad = useCallback((event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const json = JSON.parse(e.target.result);
+        const { nodes: newNodes, edges: newEdges } = SerekaTaskConverter.fromSerekaJSON(json);
+        setNodes(newNodes);
+        setEdges(newEdges);
+        
+        // 更新当前标签页名称
+        setTabs(prevTabs => prevTabs.map(tab => 
+          tab.id === activeTabId 
+            ? { ...tab, name: json.title || file.name.replace('.json', ''), nodes: newNodes, edges: newEdges }
+            : tab
+        ));
+        
+        alert(`成功导入任务：${json.title || '未命名'}`);
+      } catch (error) {
+        console.error('JSON解析错误:', error);
+        alert('导入失败：文件格式不正确');
+      }
+    };
+    reader.readAsText(file);
+    event.target.value = '';
+  }, [setNodes, setEdges, activeTabId]);
+      try {
+        const json = JSON.parse(e.target.result);
+        const { nodes: loadedNodes, edges: loadedEdges } = SerekaTaskConverter.fromSerekaJSON(json);
+        
+        setNodes(loadedNodes);
+        setEdges(loadedEdges);
+        
+        // 更新节点ID计数器
+        const maxId = Math.max(...loadedNodes.map(n => parseInt(n.id.replace(/\D/g, '')) || 0), 0);
+        nodeIdCounter.current = maxId + 1;
+        
+        alert(`成功加载任务: ${json.title || '未命名任务'}`);
+      } catch (error) {
+        console.error('加载任务失败:', error);
+        alert('加载任务失败！请检查文件格式是否正确。');
+      }
+    };
+    reader.readAsText(file);
+    
+    // 重置文件输入
+    event.target.value = '';
+  }, [setNodes, setEdges]);
+
+  const onClearWorkflow = useCallback(() => {
+    if (window.confirm('确定要清空当前工作流吗？此操作不可撤销。')) {
+      setNodes([]);
+      setEdges([]);
+      setSelectedNode(null);
+      setShowPropertyPanel(false);
+      nodeIdCounter.current = 1;
+    }
+  }, [setNodes, setEdges]);
+
+  return (
+    <div className="app">
+      <div className="header">
+        <h1>🎮 塞雷卡任务工作流编辑器</h1>
+        <div className="header-actions">
+          <button onClick={onLoadWorkflow} className="btn-load">📂 导入任务</button>
+          <button onClick={onSaveWorkflow} className="btn-save">💾 导出任务</button>
+          <button onClick={onClearWorkflow} className="btn-clear">🗑️ 清空</button>
+        </div>
+      </div>
+      
+      <input
+        ref={fileInputRef}
+        type="file"
+        accept=".json"
+        onChange={handleFileLoad}
+        style={{ display: 'none' }}
+      />
+      
+      <div className="main-content">
+        <CategorySidebar onAddNode={onAddNode} onAddCustomNode={onAddCustomNode} />
+        
+        <div className="flow-container">
+          <ReactFlow
+            nodes={nodes}
+            edges={edges}
+            onNodesChange={onNodesChange}
+            onEdgesChange={onEdgesChange}
+            onConnect={onConnect}
+            onNodeClick={onNodeClick}
+            onPaneClick={onPaneClick}
+            nodeTypes={nodeTypes}
+            fitView
+            snapToGrid
+            snapGrid={[15, 15]}
+          >
+            <Panel position="top-right">
+              <div className="info-panel">
+                <div className="info-item">
+                  <span className="info-label">节点:</span>
+                  <span className="info-value">{nodes.length}</span>
+                </div>
+                <div className="info-item">
+                  <span className="info-label">连接:</span>
+                  <span className="info-value">{edges.length}</span>
+                </div>
+              </div>
+            </Panel>
+            <Controls />
+            <MiniMap nodeColor={(node) => node.data.nodeTemplate?.color || '#9E9E9E'} />
+            <Background variant="dots" gap={15} size={1} />
+          </ReactFlow>
+        </div>
+        
+        {showPropertyPanel && (
+          <PropertyPanel
+            selectedNode={selectedNode}
+            onUpdateNode={onUpdateNode}
+            onClose={() => setShowPropertyPanel(false)}
+            allNodes={nodes}
+          />
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default App;

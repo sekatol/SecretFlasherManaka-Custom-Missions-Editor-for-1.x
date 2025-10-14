@@ -1,0 +1,127 @@
+.tab-bar {
+  background: #1e1e1e;
+  border-bottom: 1px solid #333;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  user-select: none;
+}
+
+.tabs-container {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  flex: 1;
+}
+
+.tabs-container::-webkit-scrollbar {
+  height: 4px;
+}
+
+.tabs-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 2px;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: #2d2d2d;
+  border: 1px solid #404040;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 120px;
+  max-width: 200px;
+  position: relative;
+}
+
+.tab:hover {
+  background: #353535;
+}
+
+.tab.active {
+  background: #252525;
+  border-color: #4CAF50;
+  border-bottom: 2px solid #252525;
+  margin-bottom: -1px;
+}
+
+.tab-icon {
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.tab-label {
+  flex: 1;
+  font-size: 13px;
+  color: #ccc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab.active .tab-label {
+  color: #fff;
+  font-weight: 500;
+}
+
+.tab-close {
+  background: none;
+  border: none;
+  color: #888;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.tab-close:hover {
+  background: #ff4444;
+  color: #fff;
+}
+
+.tab-new {
+  background: none;
+  border: 1px solid #404040;
+  color: #888;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: all 0.2s;
+  margin-left: 8px;
+}
+
+.tab-new:hover {
+  background: #353535;
+  color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.tab-clear {
+  background: none;
+  border: 1px solid #404040;
+  color: #888;
+  cursor: pointer;
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: all 0.2s;
+  margin-left: auto;
+  margin-right: 8px;
+}
+
+.tab-clear:hover {
+  background: #ff4444;
+  color: #fff;
+  border-color: #ff4444;
+}

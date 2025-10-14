@@ -1,0 +1,298 @@
+.sereka-task-node {
+  background: #2d2d2d;
+  border: 2px solid #007acc;
+  border-radius: 10px;
+  min-width: 280px;
+  max-width: 350px;
+  min-height: auto; /* 改为auto，允许自适应高度 */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.2s;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.sereka-task-node:hover {
+  box-shadow: 0 6px 20px rgba(0, 122, 204, 0.5);
+  transform: translateY(-2px);
+}
+
+.sereka-task-node.selected {
+  border-width: 3px;
+  box-shadow: 0 8px 24px rgba(0, 122, 204, 0.7);
+}
+
+.sereka-node-header {
+  padding: 12px 14px;
+  background-color: #007acc;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.node-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.node-title {
+  flex: 1;
+  font-weight: 600;
+  font-size: 14px;
+  color: white;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.sereka-node-body {
+  padding: 50px 14px 12px 14px; /* 顶部增加到50px，为锚点预留空间 */
+  background-color: #2d2d2d;
+  min-height: auto; /* 改为auto，允许自适应高度 */
+}
+
+.node-type-badge {
+  display: inline-block;
+  padding: 3px 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #aaaaaa;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.node-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.summary-item {
+  font-size: 11px;
+  color: #cccccc;
+  padding: 5px 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  border-left: 2px solid rgba(255, 255, 255, 0.2);
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.node-id {
+  font-size: 11px;
+  color: #888888;
+  margin-top: 8px;
+  padding: 4px 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  font-family: 'Courier New', monospace;
+}
+
+.node-handle {
+  width: 14px;
+  height: 14px;
+  background-color: #007acc;
+  border: 3px solid #2d2d2d;
+  transition: all 0.2s;
+  border-radius: 50%;
+}
+
+/* 检查点节点特殊样式 */
+.sereka-task-node.checkpoint-node {
+  min-width: 320px;
+}
+
+/* 区域引用句柄（左侧蓝色） */
+.node-handle.handle-zone {
+  background-color: #2196F3;
+  border-color: #1565C0;
+}
+
+/* 区域输出句柄（右侧蓝色） */
+.node-handle.handle-zone-out {
+  background-color: #2196F3;
+  border-color: #1565C0;
+}
+
+/* oncomplete 句柄（右上绿色） */
+.node-handle.handle-oncomplete {
+  background-color: #4CAF50;
+  border-color: #2E7D32;
+}
+
+/* onviolatecondition 句柄（右下橙红色） */
+.node-handle.handle-onviolate {
+  background-color: #FF5722;
+  border-color: #D32F2F;
+}
+
+.node-handle:hover {
+  width: 16px;
+  height: 16px;
+  background-color: #4CAF50;
+}
+
+.node-handle.handle-target {
+  top: -6px;
+}
+
+.node-handle.handle-source {
+  bottom: -6px;
+}
+
+/* 连接时的视觉反馈 */
+.sereka-task-node.connecting {
+  border-color: #4CAF50;
+}
+
+/* ========== 句柄标签样式（ComfyUI风格） ========== */
+.handle-label {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 500;
+  color: #e0e0e0;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 100;
+  line-height: 1.2;
+}
+
+.handle-label-left {
+  left: 18px;
+  transform: translateY(-50%);
+}
+
+.handle-label-right {
+  right: 18px;
+  transform: translateY(-50%);
+}
+
+.handle-label-top {
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 左右侧句柄样式 */
+.node-handle.handle-left,
+.node-handle.handle-right {
+  width: 14px;
+  height: 14px;
+  border: 2px solid white;
+  transition: all 0.2s;
+}
+
+.node-handle.handle-left:hover,
+.node-handle.handle-right:hover {
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 0 10px currentColor;
+}
+
+/* ========== 编辑模式样式（已移除，改用 PropertyPanel） ========== */
+
+.edit-hint {
+  font-size: 10px;
+  color: #666;
+  text-align: center;
+  margin-top: 10px;
+  padding: 4px 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  font-style: italic;
+}
+
+/* 模块顺序调整按钮 */
+.module-order-controls {
+  margin: 8px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.swap-order-button {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.swap-order-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.4);
+}
+
+.swap-order-button:active {
+  transform: translateY(0);
+}
+
+/* ========== 内联编辑字段样式 ========== */
+.checkpoint-description-field {
+  margin: 12px 0;
+}
+
+.checkpoint-description-field .field-label {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.checkpoint-description-field .field-value {
+  font-size: 12px;
+  color: #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px 10px;
+  border-radius: 4px;
+  line-height: 1.5;
+  word-break: break-word;
+  white-space: pre-wrap;
+  min-height: 32px;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.checkpoint-description-field .field-value.editable {
+  cursor: text;
+}
+
+.checkpoint-description-field .field-value.editable:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(76, 175, 80, 0.3);
+}
+
+.checkpoint-description-field .field-edit-textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: #e0e0e0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+  resize: none;
+  font-family: inherit;
+  line-height: 1.5;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.checkpoint-description-field .field-edit-textarea:focus {
+  outline: none;
+  border-color: #66BB6A;
+  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+}

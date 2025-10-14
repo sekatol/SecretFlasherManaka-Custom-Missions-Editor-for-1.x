@@ -1,0 +1,550 @@
+﻿!(Action_OnaniArmKuri,Action_ChikubiRotate,Action_OnaniYotuashi,Action_OnaniNeGanimata,Action_MituasiOnani,Action_OnaniNormal)
+!(Action_UseDildoFloorAnal1, Action_UseDildoFloorPussy1)
+!(AdultToy_KeyHandcuff)
+!(AdultToy_TimerHandcuff)
+!(Bodypaint,Cosplay_m_cosplay_maid_onepiece,Cosplay_m_cosplay_suit_chic_shirt,Cosplay_m_cosplay_suit_chic_jacket,Cosplay_m_cosplay_suit_chic_skirt,Cosplay_m_cosplay_suit_chic_pants,Cosplay_m_cosplay_suit_luxe_jacket,Cosplay_m_cosplay_suit_luxe_tops,Cosplay_m_cosplay_suit_luxe_pants,Cosplay_m_cosplay_sweater_tops,Cosplay_m_cosplay_glossy_jacket,Cosplay_m_cosplay_glossy_knit,Cosplay_m_cosplay_school_hoodie_hoodie,Cosplay_m_cosplay_school_hoodie_shirt,Cosplay_m_cosplay_school_hoodie_skirt,Cosplay_m_cosplay_school_gal_blazer,Cosplay_m_cosplay_school_gal_shirt_winter,Cosplay_m_cosplay_school_gal_cardigan_winter,Cosplay_m_cosplay_school_gal_skirt,Cosplay_m_cosplay_school_gal_shirt_summer)
+!(Cosplay_m_cosplay_maid_onepiece,Cosplay_m_cosplay_suit_chic_shirt,Cosplay_m_cosplay_suit_chic_jacket,Cosplay_m_cosplay_suit_chic_skirt,Cosplay_m_cosplay_suit_chic_pants,Cosplay_m_cosplay_suit_luxe_jacket,Cosplay_m_cosplay_suit_luxe_tops,Cosplay_m_cosplay_suit_luxe_pants,Cosplay_m_cosplay_sweater_tops,Cosplay_m_cosplay_glossy_jacket,Cosplay_m_cosplay_glossy_knit,Cosplay_m_cosplay_school_hoodie_hoodie,Cosplay_m_cosplay_school_hoodie_shirt,Cosplay_m_cosplay_school_hoodie_skirt,Cosplay_m_cosplay_school_gal_blazer,Cosplay_m_cosplay_school_gal_shirt_winter,Cosplay_m_cosplay_school_gal_cardigan_winter,Cosplay_m_cosplay_school_gal_skirt,Cosplay_m_cosplay_school_gal_shirt_summer)
+!(Cosplay_m_cosplay_maid_onepiece,Cosplay_m_cosplay_suit_chic_shirt,Cosplay_m_cosplay_suit_chic_jacket,Cosplay_m_cosplay_suit_chic_skirt,Cosplay_m_cosplay_suit_chic_pants,Cosplay_m_cosplay_suit_luxe_jacket,Cosplay_m_cosplay_suit_luxe_tops,Cosplay_m_cosplay_suit_luxe_pants,Cosplay_m_cosplay_sweater_tops,Cosplay_m_cosplay_glossy_jacket,Cosplay_m_cosplay_glossy_knit,Cosplay_m_cosplay_school_hoodie_hoodie,Cosplay_m_cosplay_school_hoodie_shirt,Cosplay_m_cosplay_school_hoodie_skirt,Cosplay_m_cosplay_school_gal_blazer,Cosplay_m_cosplay_school_gal_shirt_winter,Cosplay_m_cosplay_school_gal_cardigan_winter,Cosplay_m_cosplay_school_gal_skirt,Cosplay_m_cosplay_school_gal_shirt_summer,Cosplay_m_cosplay_school_hoodie_coat)
+!(Crouching,HandcuffsBack,Blindfolded,Bodypaint,Futanari,VibrationHigh,PistonHigh)
+!(Crouching,HandcuffsBack,Blindfolded,Bodypaint,VibrationHigh)
+!(Crouching,HandcuffsBack,Blindfolded,Bodypaint,VibrationHigh,PistonHigh)
+!(Dashing,Crouching)
+!(Skill_DisableHideCostume, Skill_TimeStop, Skill_Exhibitionism, Skill_Sex)
+!(Skill_TimeStop, Skill_Exhibitionism, Skill_Sex)
+!(Skill_TimeStop,Skill_Exhibitionism,Skill_Sex)
+!(TimedHandcuffs,HandcuffsObject)
+![InOpenToilet]
+![Peeing]
+!Action_Dogeza
+!Action_HipShake
+!Action_IBalance
+!Action_OnaniArmKuri
+!Action_Pinpon
+!Action_UseDildoWallAnal1
+!Blindfolded
+!Cosplay_m_cosplay_succubus_cosplay_pants
+!Cosplay_m_cosplay_succubus_cosplay_tops
+!Cosplay_m_cosplay_suit_chic_jacket
+!Cosplay_m_cosplay_suit_chic_panty
+!Cosplay_m_cosplay_suit_chic_shirt
+!Cosplay_m_cosplay_suit_chic_skirt
+!Cosplay_m_cosplay_suit_chic_stocking
+!Crouching
+!Dashing
+!Exposed_All
+!HandcuffsObject
+!IsDayTime
+!Item_HandcuffKey
+!Item_VibeRemocon
+!KeyedHandcuffs
+!Naked
+!NearNPC
+!Orgasm
+!Sitting
+([Ecstasy>0.1,Ecstasy<0.2,Action_OnaniYotuashi])
+([Ecstasy>0.2,Ecstasy<0.3,Action_OnaniYotuashi])
+([Ecstasy>0.4,Ecstasy<0.5,Action_OnaniYotuashi])
+([Ecstasy>0.6,Ecstasy<0.7,Action_OnaniYotuashi])
+([Ecstasy>0.9,Ecstasy<0.95,Action_OnaniYotuashi])
+([Orgasm,Action_OnaniYotuashi])
+(Action_PeeStand,Action_PeeDog,Action_PeeKaikyaku,Peeing)
+(Cosplay_m_cosplay_general_upper_race_pants,Cosplay_m_cosplay_general_upper_ultimate_pants,Cosplay_m_cosplay_general_upper_chack_bikini_pants,Cosplay_m_cosplay_general_upper_micro_bikini_pants,Cosplay_m_cosplay_succubus_cosplay_pants,Cosplay_m_cosplay_sister_pants,Cosplay_m_cosplay_cow_pants,Cosplay_m_cosplay_suit_chic_panty,Cosplay_m_cosplay_sweater_pants)
+(Cosplay_m_cosplay_glossy_knit, Cosplay_m_cosplay_suit_luxe_pants, Cosplay_m_cosplay_suit_chic_pants, Cosplay_m_cosplay_suit_chic_skirt)
+(Cosplay_m_cosplay_school_gal_shirt_summer, Cosplay_m_cosplay_school_gal_cardigan_winter, Cosplay_m_cosplay_school_gal_shirt_winter, Cosplay_m_cosplay_school_hoodie_shirt, Cosplay_m_cosplay_school_hoodie_hoodie, Cosplay_m_cosplay_glossy_knit, Cosplay_m_cosplay_sweater_tops, Cosplay_m_cosplay_suit_luxe_tops, Cosplay_m_cosplay_suit_chic_shirt, Cosplay_m_cosplay_maid_onepiece)
+(Cosplay_m_cosplay_school_gal_skirt, Cosplay_m_cosplay_school_hoodie_skirt, Cosplay_m_cosplay_glossy_knit, Cosplay_m_cosplay_sweater_tops, Cosplay_m_cosplay_suit_luxe_pants, Cosplay_m_cosplay_suit_chic_pants, Cosplay_m_cosplay_suit_chic_skirt, Cosplay_m_cosplay_maid_onepiece)
+(Cosplay_m_cosplay_school_hoodie_skirt,Cosplay_m_cosplay_suit_chic_skirt,Cosplay_m_cosplay_school_gal_skirt)
+(Cosplay_m_cosplay_suit_luxe_pants, Cosplay_m_cosplay_school_gal_cardigan_summer, Cosplay_m_cosplay_school_gal_skirt, Cosplay_m_cosplay_school_hoodie_skirt, Cosplay_m_cosplay_glossy_knit, Cosplay_m_cosplay_sweater_tops, Cosplay_m_cosplay_maid_onepiece)
+(Naked,FrontOpen1,FrontOpen2,BackOpen)
+[ Cosplay_m_cosplay_general_genital_anal_plug,Cosplay_m_cosplay_school_gal_skirt, Cosplay_m_cosplay_school_gal_necklace, Cosplay_m_cosplay_school_gal_bracelet, Cosplay_m_cosplay_school_gal_shirt_summer, Cosplay_m_cosplay_school_gal_ribbon, Cosplay_m_cosplay_school_gal_cardigan_summer]
+[ Cosplay_m_cosplay_school_gal_skirt, Cosplay_m_cosplay_school_gal_necklace, Cosplay_m_cosplay_school_gal_bracelet, Cosplay_m_cosplay_school_gal_shirt_summer, Cosplay_m_cosplay_school_gal_ribbon, Cosplay_m_cosplay_school_gal_cardigan_summer]
+[!(Dashing),Action_AttachHandcuffs,Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[!(Dashing),Action_PickUpItem,Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[!(Dashing),Naked,SubCondition_cosplay,SubCondition_cosplay2,Action_DrinkWater]
+[!(Dashing),Naked,SubCondition_cosplay,SubCondition_cosplay2,Action_HipShake]
+[!(Dashing),Naked,SubCondition_cosplay,SubCondition_cosplay2,Action_PeeKaikyaku]
+[!(Dashing),Naked,SubCondition_cosplay,SubCondition_cosplay2,Action_UseDildoFloorAnal1,Orgasm]
+[!(Dashing),Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[!(Dashing),Naked,SubCondition_cosplay]
+[!(Dashing),SubCondition_cosplay,SubCondition_cosplay2]
+[!(Dashing),SubCondition_cosplay]
+[!(HandcuffsObject),Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[!(Watched,ShowingOff)]
+[!Cosplay_m_cosplay_general_genital_anal_plug]
+[!Cosplay_m_cosplay_general_upper_bra]
+[!Cosplay_m_cosplay_general_upper_ultimate_pants]
+[!Cosplay_m_cosplay_glossy_knit,Naked]
+[!Cosplay_m_cosplay_suit_chic_skirt,!Cosplay_m_cosplay_suit_luxe_jacket]
+[!Cosplay_m_cosplay_suit_luxe_tops,Cosplay_m_cosplay_suit_chic_card]
+[!Dashing,AdultToy_Vibrator]
+[!Dashing,FrontOpen1,!Blindfolded,AdultToy_Vibrator,!HandcuffsBack]
+[!Dashing,FrontOpen1,AdultToy_Vibrator,Action_OnaniNormal,Orgasm]
+[!Dashing,FrontOpen1,AdultToy_Vibrator,Action_OnaniNormal]
+[!Dashing,FrontOpen1,AdultToy_Vibrator]
+[!Dashing,FrontOpen1,Blindfolded,AdultToy_Vibrator,HandcuffsBack,Orgasm]
+[!Dashing,FrontOpen1,Blindfolded,AdultToy_Vibrator,HandcuffsBack]
+[!Dashing,FrontOpen1,Blindfolded,AdultToy_Vibrator]
+[!Dashing,FrontOpen1,Blindfolded]
+[!Dashing,FrontOpen1]
+[!HandcuffsBack,SubCondition_cosplay]
+[!HandcuffsObject,SubCondition_cosplay]
+[!InLight,![IsDayTime,NPCArea],HandcuffsBack,KeyedHandcuffs,!VibrationHigh,!Blindfolded]
+[!InLight,![IsDayTime,NPCArea],HandcuffsBack,KeyedHandcuffs,VibrationHigh,!Blindfolded]
+[!InLight,![IsDayTime,NPCArea],HandcuffsBack,KeyedHandcuffs,VibrationHigh,Blindfolded]
+[!IsDayTime,Rank>6]
+[!Naked, (FrontOpen1,FrontOpen2), AdultToy_Vibrator, VibrationHigh, SubCondition_no_cosplay]
+[!Naked,!FrontOpen2,!BackOpen,!FrontOpen1,SubCondition_All_toy]
+[!Naked,!FrontOpen2,!BackOpen,!FrontOpen1]
+[!Naked,AdultToy_Vibrator,VibrationOff]
+[!Naked,OwnsCosplay_m_cosplay_general_upper_race_pants, OwnsCosplay_m_cosplay_general_leg_stocking, OwnsCosplay_m_cosplay_suit_luxe_chorker, OwnsCosplay_m_cosplay_suit_luxe_tops, OwnsCosplay_m_cosplay_suit_luxe_pants, OwnsCosplay_m_cosplay_suit_luxe_shoes,OwnsAdultToy_TimerHandcuff, OwnsAdultToy_Vibrator, OwnsAdultToy_KeyHandcuff, OwnsAdultToy_KuriRotor, OwnsAdultToy_TitRotor, OwnsAdultToy_EyeMask]
+[!Naked]
+[!NormalHandcuffs,!KeyedHandcuffs,!TimedHandcuffs,!Naked,!FrontOpen1,!FrontOpen2,!BackOpen,!Futanari,!IsDayTime,SubCondition_no_hiding_cosplay]
+[!Orgasm,KeyedHandcuffs]
+[!Skill_AutoSlow,!Skill_Perspective,!Skill_DisableHideCostume,!Skill_TimeStop,!Skill_Exhibitionism,!Skill_Sex,Skill_NoReinforceEffect]
+[!Skill_DisableHideCostume,!IsDayTime,,OwnsCosplay_m_cosplay_general_upper_sling_shot]
+[!Skill_DisableHideCostume,!IsDayTime]
+[!SubCondition_cosplay,!Cosplay_m_cosplay_school_gal_blazer,!Cosplay_m_cosplay_school_gal_cardigan_winter]
+[!SubCondition_panties]
+[(Action_PeeStand,Action_PeeKaikyaku,Action_PeeDog)]
+[(Action_PutDildoWall,Action_PutDildoFloor)]
+[(Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1)]
+[(Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1)]
+[(Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1)]
+[(Cosplay_m_cosplay_general_genital_tail_plug,Cosplay_m_cosplay_kemono_tail),(Cosplay_m_cosplay_kemono_ear_cat,Cosplay_m_cosplay_kemono_ear_fox),Cosplay_m_cosplay_kemono_hand,Cosplay_m_cosplay_kemono_foot]
+[(FrontOpen1,FrontOpen2), BackOpen, SubCondition_no_cosplay]
+[(FrontOpen1,FrontOpen2), SubCondition_no_cosplay]
+[(FrontOpen1,FrontOpen2), VibrationHigh, AdultToy_Vibrator, SubCondition_no_cosplay]
+[(FrontOpen1,FrontOpen2),BackOpen,NPCArea]
+[(FrontOpen1,FrontOpen2,BackOpen)]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),!(Dashing),SubCondition_cosplay1]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),Action_DrinkWater]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),Action_HipShake]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),Action_PickDildo]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),Action_SitDildo]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),Action_SitDildoPut]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),Action_UseBuyMachine,SubCondition_cosplay1]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),FrontOpen1]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),Orgasm]
+[(FrontOpen1,FrontOpen2,BackOpen,Naked),SubCondition_cosplay1]
+[(InLight,[IsDayTime,NPCArea]),SubCondition_ExposedState,HandcuffsBack,KeyedHandcuffs,VibrationHigh]
+[(InLight,[IsDayTime,NPCArea]),SubCondition_ExposedState,HandcuffsBack,KeyedHandcuffs]
+[(InLight,[IsDayTime,NPCArea]),SubCondition_ExposedState]
+[(Naked,FrontOpen1,FrontOpen2,BackOpen), (Action_OnaniArmKuri, Action_OnaniYotuashi, Action_OnaniNeGanimata, Action_MituasiOnani, Action_OnaniNormal), SubCondition_no_cosplay]
+[(Naked,FrontOpen1,FrontOpen2,BackOpen),(VibrationRandom,VibrationHigh)]
+[(OwnsCosplay_m_cosplay_general_genital_tail_plug,OwnsCosplay_m_cosplay_kemono_tail),(OwnsCosplay_m_cosplay_kemono_ear_cat,OwnsCosplay_m_cosplay_kemono_ear_fox),OwnsCosplay_m_cosplay_kemono_hand,OwnsCosplay_m_cosplay_kemono_foot]
+[(SubCondition_Flashing,Naked),Action_HipShake,IsDayTime]
+[(SubCondition_Flashing,Naked)]
+[(SubCondition_UseDildoFloor,SubCondition_UseDildoWall,Action_SitDildo)]
+[(VibrationHigh,VibrationRandom)]
+[(VibrationLow)]
+[(VibrationLow,VibrationHigh,VibrationRandom),AdultToy_Vibrator,AdultToy_TitRotor,AdultToy_KuriRotor]
+[(VibrationLow,VibrationHigh,VibrationRandom)]
+[(VibrationOff)]
+[(Watched,ShowingOff)]
+[]
+[Action_ConbiniTakeGoods]
+[Action_Dogeza,Exposed_All]
+[Action_Dogeza,Naked]
+[Action_Dogeza]
+[Action_DrinkWater, AdultToy_Vibrator, !Item_VibeRemocon, SubCondition_no_cosplay]
+[Action_DrinkWater]
+[Action_GanimataWalk]
+[Action_HandcuffsAtMap,AdultToy_TimerHandcuff]
+[Action_HandcuffsAtMap,Naked,SubCondition_cosplay,SubCondition_VibrationHigh]
+[Action_HandOver, SubCondition_Hard]
+[Action_HandOver]
+[Action_HipShake]
+[Action_MituasiOnani,Orgasm]
+[Action_None,Naked,SubCondition_cosplay,SubCondition_VibrationHigh]
+[Action_None]
+[Action_OnaniNeGanimata,Ecstasy>=0.8]
+[Action_PeeKaikyaku,FrontOpen2,BackOpen,Peeing]
+[Action_PutDildoFloor]
+[Action_PutDildoWall]
+[Action_SitDildoPut]
+[Action_UseBuyMachine, AdultToy_Vibrator, !Item_VibeRemocon, SubCondition_no_cosplay]
+[Action_UseBuyMachine,Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[Action_UseBuyMachine,SubCondition_inCos]
+[Action_UseBuyMachine]
+[Action_UseDildoFloorAnal1,Naked,SubCondition_cosplay,SubCondition_cosplay2,Orgasm]
+[Action_UseDildoFloorAnal1,Orgasm]
+[Action_UseDildoWallAnal1,KeyedHandcuffs]
+[Action_UseDildoWallFella1,KeyedHandcuffs]
+[Action_WakimiseCrouch, FrontOpen1]
+[Action_WakimiseCrouch,Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[AdultToy_KuriRotor,AdultToy_PistonAnal,FrontOpen2,BackOpen]
+[AdultToy_KuriRotor,AdultToy_TitRotor,!Cosplay_m_cosplay_suit_chic_skirt]
+[AdultToy_KuriRotor,AdultToy_TitRotor,Item_VibeRemocon]
+[AdultToy_KuriRotor,AdultToy_TitRotor]
+[AdultToy_KuriRotor,VibrationLow]
+[AdultToy_KuriRotor,VibrationRandom]
+[AdultToy_TitRotor,AdultToy_KuriRotor]
+[AdultToy_Vibrator, !Item_VibeRemocon, SubCondition_no_cosplay]
+[AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor, AdultToy_PistonAnal,AdultToy_PistonPussy]
+[AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor,Action_HandOver]
+[AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor]
+[AdultToy_Vibrator, VibrationRandom, SubCondition_no_cosplay]
+[AdultToy_Vibrator,AdultToy_TitRotor,AdultToy_KuriRotor]
+[AdultToy_Vibrator,VibrationLow]
+[AdultToy_Vibrator,VibrationRandom,Naked]
+[AdultToy_Vibrator]
+[Blindfolded,!Dashing]
+[Blindfolded,Action_DogTintin]
+[Blindfolded,Action_MituasiOnani]
+[Blindfolded,Crouching]
+[Blindfolded,TimedHandcuffs,HandcuffsObject,AdultToy_Vibrator,AdultToy_TitRotor,AdultToy_KuriRotor,VibrationHigh,NPCArea]
+[Cosplay_m_cosplay_bunny_ear,Cosplay_m_cosplay_bunny_tops,Cosplay_m_cosplay_bunny_harness_top,Cosplay_m_cosplay_bunny_harness_under,Cosplay_m_cosplay_bunny_sockes,Cosplay_m_cosplay_bunny_shoes]
+[Cosplay_m_cosplay_cow_hair_band,Cosplay_m_cosplay_cow_choker,Cosplay_m_cosplay_cow_glove,Cosplay_m_cosplay_cow_bra,Cosplay_m_cosplay_cow_pants,Cosplay_m_cosplay_cow_tail,Cosplay_m_cosplay_cow_boots]
+[Cosplay_m_cosplay_general_genital_anal_plug,IsDayTime,Action_DrinkWater]
+[Cosplay_m_cosplay_general_genital_anal_plug,IsDayTime,Action_UseBuyMachine]
+[Cosplay_m_cosplay_general_genital_anal_plug,IsDayTime]
+[Cosplay_m_cosplay_general_genital_anal_plug]
+[Cosplay_m_cosplay_general_upper_bra, Cosplay_m_cosplay_general_upper_ultimate_pants, Cosplay_m_cosplay_sister_shoes, Cosplay_m_cosplay_suit_chic_stocking, Cosplay_m_cosplay_school_gal_blazer, Cosplay_m_cosplay_school_gal_shirt_winter, Cosplay_m_cosplay_school_gal_necktie, Cosplay_m_cosplay_school_gal_skirt, Cosplay_m_cosplay_school_gal_bag, Cosplay_m_cosplay_school_gal_sockes, Cosplay_m_cosplay_school_gal_earing, Cosplay_m_cosplay_school_gal_necklace]
+[Cosplay_m_cosplay_general_upper_bra]
+[Cosplay_m_cosplay_general_upper_condom, Naked,Action_DogTintin]
+[Cosplay_m_cosplay_general_upper_condom, Naked,Action_DrinkWater]
+[Cosplay_m_cosplay_general_upper_condom, Naked,Action_PeeDog]
+[Cosplay_m_cosplay_general_upper_condom, Naked,Crouching]
+[Cosplay_m_cosplay_general_upper_condom, Naked]
+[Cosplay_m_cosplay_general_upper_condom]
+[Cosplay_m_cosplay_general_upper_full_glove, Cosplay_m_cosplay_maid_apron, Cosplay_m_cosplay_maid_stocking, Cosplay_m_cosplay_suit_luxe_chorker, Cosplay_m_cosplay_suit_luxe_shoes]
+[Cosplay_m_cosplay_general_upper_ofuda]
+[Cosplay_m_cosplay_general_upper_ultimate_pants]
+[Cosplay_m_cosplay_glossy_knit]
+[Cosplay_m_cosplay_ninja_omen,Cosplay_m_cosplay_ninja_mask,Cosplay_m_cosplay_ninja_boots]
+[Cosplay_m_cosplay_school_gal_skirt,(Cosplay_m_cosplay_school_gal_shirt_summer,Cosplay_m_cosplay_school_gal_shirt_winter)]
+[Crouching, AdultToy_Vibrator, SubCondition_no_cosplay]
+[Crouching,Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[Detection>=0]
+[Detection>0.85, !Invisible, !Bodypaint, !Skill_NpcDirect, !Skill_AutoSlow, !Skill_Perspective, !Skill_TimeStop, !Skill_DisableHideCostume, !Skill_Exhibitionism, !Skill_Sex]
+[Ecstasy == 0, (Action_UseDildoFloorAnal1, Action_UseDildoFloorPussy1)]
+[Ecstasy==0,Action_OnaniYotuashi]
+[Ecstasy==1]
+[Exposed_All,(Action_UseDildoFloorAnal1,Action_UseDildoFloorPussy1),Orgasm]
+[Exposed_All,(Action_UseDildoFloorAnal1,Action_UseDildoFloorPussy1)]
+[Exposed_All,Action_None]
+[Exposed_Front,Exposed_Hip,!Exposed_All]
+[FrontClosed,BackClosed]
+[FrontClosed,SubCondition_cosplay1,Action_HandcuffsAtMap]
+[FrontClosed,SubCondition_cosplay1]
+[FrontOpen1,!Dashing]
+[FrontOpen1,!Naked,!FrontOpen2]
+[FrontOpen1]
+[FrontOpen2,!Dashing]
+[FrontOpen2,Action_ConbiniTakeGoods]
+[FrontOpen2,BackOpen,!Dashing]
+[FrontOpen2,BackOpen,Action_DrinkWater]
+[FrontOpen2,BackOpen,Action_UseBuyMachine]
+[FrontOpen2,BackOpen,Sitting,Peeing]
+[FrontOpen2,BackOpen,Sitting,SubCondition_All_toy,Orgasm]
+[FrontOpen2,BackOpen,Sitting,SubCondition_All_toy]
+[FrontOpen2,BackOpen,Sitting]
+[FrontOpen2,BackOpen,SubCondition_All_toy,!HandcuffsObject]
+[FrontOpen2,BackOpen,SubCondition_All_toy,(Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1),InOpenToilet]
+[FrontOpen2,BackOpen,SubCondition_All_toy,Action_PutDildoFloor]
+[FrontOpen2,BackOpen,SubCondition_All_toy,HandcuffsObject]
+[FrontOpen2,BackOpen,SubCondition_All_toy,TimedHandcuffs,(Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1),InOpenToilet]
+[FrontOpen2,BackOpen,SubCondition_All_toy,TimedHandcuffs]
+[FrontOpen2,BackOpen,SubCondition_All_toy,VibrationHigh,PistonHigh,HandcuffsObject]
+[FrontOpen2,BackOpen,SubCondition_All_toy,VibrationLow,PistonMedium,HandcuffsObject]
+[FrontOpen2,BackOpen,SubCondition_All_toy,VibrationLow,PistonMedium]
+[FrontOpen2,BackOpen,SubCondition_All_toy]
+[FrontOpen2,BackOpen]
+[FrontOpen2]
+[HandcuffsBack,KeyedHandcuffs]
+[HandcuffsObject,,NormalHandcuffs,FrontOpen2,BackOpen]
+[HandcuffsObject,Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[InOpenToilet,Action_SitDildo,Ecstasy==1]
+[InOpenToilet]
+[IsDayTime,Rank>6]
+[IsDayTime]
+[Item_HandcuffKey, NoHandcuffs, !Naked]
+[Item_HandcuffKey, NoHandcuffs]
+[Item_VibeRemocon, SubCondition_no_cosplay]
+[Item_VibeRemocon]
+[KeyedHandcuffs,!Item_HandcuffKey]
+[KeyedHandcuffs]
+[MissionCurrCompleted_60014, SubCondition_Hard]
+[Naked, !Item_VibeRemocon, AdultToy_Vibrator, VibrationRandom, SubCondition_no_cosplay]
+[Naked, (Action_DogTintin, Action_Dogeza), AdultToy_Vibrator, SubCondition_no_cosplay]
+[Naked, (Action_PeeDog, Action_PeeKaikyaku, Action_PeeStand), Peeing, SubCondition_no_cosplay]
+[Naked, (Action_PeeDog, Action_PeeKaikyaku, Action_PeeStand), SubCondition_no_cosplay]
+[Naked, Action_UseBuyMachine]
+[Naked, Crouching, AdultToy_Vibrator, SubCondition_no_cosplay]
+[Naked, SubCondition_no_cosplay]
+[Naked, VibrationRandom, AdultToy_Vibrator, !Item_VibeRemocon, SubCondition_no_cosplay]
+[Naked,!Blindfolded]
+[Naked,(!OwnsCosplay_m_cosplay_general_head_kuchikase,Cosplay_m_cosplay_general_head_kuchikase), (!OwnsCosplay_m_cosplay_general_genital_plug_light, Cosplay_m_cosplay_general_genital_plug_light), (!OwnsCosplay_m_cosplay_cow_hair_band, Cosplay_m_cosplay_cow_hair_band), (!OwnsCosplay_m_cosplay_cow_choker,Cosplay_m_cosplay_cow_choker), Cosplay_m_cosplay_suit_luxe_chorker, AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor]
+[Naked,(Action_MituasiOnani,Action_OnaniNormal,Action_OnaniNeGanimata,Action_OnaniSikoru,Action_OnaniYotuashi,Action_OnaniArmKuri),NearNPC]
+[Naked,(Action_MituasiOnani,Action_OnaniNormal,Action_OnaniNeGanimata,Action_OnaniSikoru,Action_OnaniYotuashi,Action_OnaniArmKuri)]
+[Naked,(Action_MituasiOnani,Action_OnaniNormal,Action_OnaniNeGanimata,Action_OnaniSikoru,Action_OnaniYotuashi,Action_OnaniArmKuri,Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1,Action_SitDildo),NearNPC]
+[Naked,(Action_MituasiOnani,Action_OnaniNormal,Action_OnaniNeGanimata,Action_OnaniSikoru,Action_OnaniYotuashi,Action_OnaniArmKuri,Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1,Action_SitDildo)]
+[Naked,(Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1)]
+[Naked,(Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1,Action_SitDildo),NearNPC]
+[Naked,(Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1)]
+[Naked,(Cosplay_m_cosplay_general_genital_rubbit_tail,Cosplay_m_cosplay_general_genital_tail_plug,Cosplay_m_cosplay_kemono_tail,Cosplay_m_cosplay_latex_pony_tail,Cosplay_m_cosplay_cow_tail),(Cosplay_m_cosplay_kemono_ear_cat,Cosplay_m_cosplay_kemono_ear_fox,Cosplay_m_cosplay_bunny_ear,Cosplay_m_cosplay_latex_pony_ear,Cosplay_m_cosplay_cow_hair_band)]
+[Naked,(VibrationHigh,VibrationLow,VibrationRandom),AdultToy_Vibrator]
+[Naked,(VibrationHigh,VibrationRandom)]
+[Naked,Action_ConbiniTakeGoods,SubCondition_cosplay,SubCondition_VibratorHiRand,SubCondition_vibequiped,!(Orgasm)]
+[Naked,Action_Dogeza,NPCArea]
+[Naked,Action_DrinkWater,SubCondition_cosplay]
+[Naked,Action_DrinkWater]
+[Naked,Action_GanimataKoshiHeko]
+[Naked,Action_GanimataWalk]
+[Naked,Action_HandcuffsAtMap,TimedHandcuffs]
+[Naked,Action_HandcuffsAtMap]
+[Naked,Action_IBalance]
+[Naked,Action_PeeDog,Peeing]
+[Naked,Action_PeeStand,Peeing]
+[Naked,Action_SitDown,IsDayTime]
+[Naked,Action_UseBuyMachine]
+[Naked,AdultToy_Vibrator,Orgasm]
+[Naked,AdultToy_Vibrator,VibrationLow]
+[Naked,AdultToy_Vibrator]
+[Naked,Blindfolded,(Action_MituasiOnani,Action_OnaniNormal,Action_OnaniNeGanimata,Action_OnaniSikoru,Action_OnaniYotuashi,Action_OnaniArmKuri,Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1,Action_SitDildo)]
+[Naked,Blindfolded,IsDayTime,Action_GanimataWalk]
+[Naked,Blindfolded,NPCArea,(Action_MituasiOnani,Action_OnaniNormal,Action_OnaniNeGanimata,Action_OnaniSikoru,Action_OnaniYotuashi,Action_OnaniArmKuri,Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1,Action_SitDildo)]
+[Naked,Blindfolded,SubCondition_PeePose,Peeing]
+[Naked,Cosplay_m_cosplay_general_upper_condom,Orgasm]
+[Naked,Cosplay_m_cosplay_general_upper_condom]
+[Naked,Cosplay_m_cosplay_general_upper_race_pants, Cosplay_m_cosplay_general_leg_stocking, Cosplay_m_cosplay_suit_luxe_chorker, Cosplay_m_cosplay_suit_luxe_tops, Cosplay_m_cosplay_suit_luxe_pants, Cosplay_m_cosplay_suit_luxe_shoes]
+[Naked,Crouching,SubCondition_cosplay]
+[Naked,Crouching]
+[Naked,HandcuffsBack,IsDayTime,NearNPC]
+[Naked,HandcuffsBack,NPCArea]
+[Naked,HandcuffsObject,!HandcuffsBack]
+[Naked,IsDayTime]
+[Naked,NearNPC,IsDayTime]
+[Naked,NearNPC]
+[Naked,Orgasm,SubCondition_Absorb]
+[Naked,Orgasm,SubCondition_conAbsorb]
+[Naked,Orgasm]
+[Naked,Peeing,Action_PeeDog,SubCondition_cosplay]
+[Naked,Peeing]
+[Naked,Rank==7]
+[Naked,ShowingOff,Action_DogTintin,SubCondition_cosplay]
+[Naked,SubCondition_All_toy,!Dashing]
+[Naked,SubCondition_All_toy]
+[Naked,SubCondition_cosplay,Orgasm]
+[Naked,SubCondition_cosplay,SubCondition_cosplay2,Crouching]
+[Naked,SubCondition_cosplay,SubCondition_cosplay2,Orgasm]
+[Naked,SubCondition_cosplay,SubCondition_cosplay2,SubCondition_VibrationLow]
+[Naked,SubCondition_cosplay,SubCondition_cosplay2]
+[Naked,SubCondition_cosplay,SubCondition_vibequiped,SubCondition_vibeoff]
+[Naked,SubCondition_cosplay,SubCondition_vibequiped,SubCondition_vibeon]
+[Naked,SubCondition_cosplay,SubCondition_vibequiped,SubCondition_VibratorHiRand]
+[Naked,SubCondition_cosplay,SubCondition_VibrationHigh]
+[Naked,SubCondition_cosplay,SubCondition_VibratorHiRand,SubCondition_vibequiped,!(Orgasm)]
+[Naked,SubCondition_cosplay]
+[Naked,SubCondition_cosplay1,!Item_VibeRemocon]
+[Naked,SubCondition_cosplay1,]
+[Naked,SubCondition_cosplay1,Action_DogTintin]
+[Naked,SubCondition_cosplay1,Action_HipShake]
+[Naked,SubCondition_cosplay1,Action_PeeStand]
+[Naked,SubCondition_cosplay1,Crouching]
+[Naked,SubCondition_cosplay1,Orgasm]
+[Naked,SubCondition_cosplay1]
+[Naked,SubCondition_EquippedVibrators,SubCondition_VibratorHiRand]
+[Naked,SubCondition_EquippedVibrators]
+[Naked,SubCondition_Stealth,!Peeing]
+[Naked,SubCondition_Stealth]
+[Naked,SubCondition_vibrat,HandcuffsBack,KeyedHandcuffs]
+[Naked,SubCondition_vibrat]
+[Naked,SubCondition_VibratorHiLoRand]
+[Naked,SubCondition_VibratorHiRand]
+[Naked,VibrationHigh,AdultToy_Vibrator,AdultToy_TitRotor,AdultToy_KuriRotor,HandcuffsBack,KeyedHandcuffs]
+[Naked,VibrationHigh,AdultToy_Vibrator,AdultToy_TitRotor,AdultToy_KuriRotor]
+[Naked,VibrationHigh,HandcuffsBack,KeyedHandcuffs,(Action_UseDildoFloorAnal1,Action_UseDildoFloorPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallFella1),Orgasm]
+[Naked,VibrationHigh,HandcuffsBack,KeyedHandcuffs]
+[Naked]
+[NearNPC,NPCArea]
+[NPCArea,!Dashing, SubCondition_walkcosplay]
+[NPCArea,!Dashing]
+[Orgasm, SubCondition_Hard]
+[Orgasm,(Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1,Action_SitDildo,Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1)]
+[Orgasm,SubCondition_Absorb]
+[Orgasm,SubCondition_conAbsorb]
+[OwnsCosplay_m_cosplay_general_genital_tail_plug,OwnsAdultToy_KeyHandcuff]
+[OwnsCosplay_m_cosplay_general_upper_condom]
+[OwnsCosplay_m_cosplay_succubus_cosplay_tops,OwnsCosplay_m_cosplay_succubus_cosplay_pants]
+[Peeing,Action_PeeDog,SubCondition_inCos]
+[Peeing]
+[PistonOff,VibrationOff,Rank>6,Item_Dildo>5,Skill_FixFps,!Skill_ContinueMission,Skill_NpcDirect,!Naked,!IsDayTime,NoHandcuffs]
+[SubCondition_Anticheat, Skill_FixFps, Skill_HideStrangeUi, Skill_NoReinforceEffect]
+[SubCondition_BasicConditions, !(SubCondition_AnyBoobCovers, SubCondition_AnyButtCovers, SubCondition_AnyVaginaCovers, SubCondition_AnyPenisCovers)]
+[SubCondition_BasicConditions, ([(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyBoobCovers], [(Naked, BackOpen), !SubCondition_AnyButtCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyVaginaCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyPenisCovers, Futanari])]
+[SubCondition_BasicConditions, (AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor), !(SubCondition_AnyBoobCovers, SubCondition_AnyButtCovers, SubCondition_AnyVaginaCovers, SubCondition_AnyPenisCovers)]
+[SubCondition_BasicConditions, (AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor), ([(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyBoobCovers], [(Naked, BackOpen), !SubCondition_AnyButtCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyVaginaCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyPenisCovers, Futanari])]
+[SubCondition_BasicConditionsFlash, ([(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyBoobCovers], [(Naked, BackOpen), !SubCondition_AnyButtCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyVaginaCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyPenisCovers, Futanari])]
+[SubCondition_BasicConditionsFlash, (AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor), ([(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyBoobCovers], [(Naked, BackOpen), !SubCondition_AnyButtCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyVaginaCovers], [(Naked, FrontOpen1, FrontOpen2), !SubCondition_AnyPenisCovers, Futanari])]
+[SubCondition_begin]
+[SubCondition_comcon]
+[SubCondition_cosplay,IsDayTime]
+[SubCondition_cosplay]
+[SubCondition_cosplay_start, IsDayTime]
+[SubCondition_cosplay1,Action_UseDildoFloorAnal1,Orgasm]
+[SubCondition_cosplay1]
+[SubCondition_EquippedVibrators,Blindfolded]
+[SubCondition_Flashing,(Action_PutDildoFloor,Action_PutDildoWall)]
+[SubCondition_Flashing,Action_HipShake]
+[SubCondition_Flashing,SubCondition_VibratorHiLoRand]
+[SubCondition_Flashing]
+[SubCondition_Formula1]
+[SubCondition_Formula2]
+[SubCondition_Formula4]
+[SubCondition_Formula5]
+[SubCondition_Hard, Item_Water, Item_Dildo]
+[SubCondition_Hard,Blindfolded,TimedHandcuffs,HandcuffsObject,AdultToy_Vibrator,AdultToy_TitRotor,AdultToy_KuriRotor,VibrationHigh,NPCArea]
+[SubCondition_Hard]
+[SubCondition_inCos,IsDayTime,Action_DogTintin,Orgasm]
+[SubCondition_inCos,IsDayTime,Action_Pinpon]
+[SubCondition_inCos,IsDayTime]
+[SubCondition_nakedandvibe,Orgasm,InOpenToilet]
+[SubCondition_nakedandvibe,Orgasm]
+[SubCondition_nakedandvibe]
+[SubCondition_NakedFlashingVib,!Orgasm]
+[SubCondition_NakedFlashingVib,Action_SitDildo,Orgasm]
+[SubCondition_NakedFlashingVib,SubCondition_UseDildoAny,Orgasm]
+[SubCondition_NakedFlashingVib,SubCondition_UseDildoFloor,Orgasm]
+[SubCondition_NakedFlashingVib,SubCondition_UseDildoWall,Orgasm]
+[SubCondition_NakedFlashingVib]
+[SubCondition_NakedOrFlashing,SubCondition_VibratorHiRand]
+[SubCondition_NakedVib,!HandcuffsObject]
+[SubCondition_NakedVib,!Peeing,Action_None]
+[SubCondition_NakedVib,!Peeing]
+[SubCondition_NakedVib,Action_DrinkWater]
+[SubCondition_NakedVib,Action_HandcuffsAtMap,HandcuffsObject,NormalHandcuffs]
+[SubCondition_NakedVib,Action_Pinpon]
+[SubCondition_NakedVib,Blindfolded,Orgasm,HandcuffsObject]
+[SubCondition_NakedVib,Blindfolded]
+[SubCondition_NakedVib,HandcuffsBack,KeyedHandcuffs]
+[SubCondition_NakedVib,HandcuffsBack]
+[SubCondition_NakedVib,NoHandcuffs,!Blindfolded]
+[SubCondition_NakedVib,NoHandcuffs]
+[SubCondition_NakedVib,Peeing,Orgasm]
+[SubCondition_NakedVib,SubCondition_PeePose,Orgasm,Peeing]
+[SubCondition_NakedVib,SubCondition_Stealth,NearNPC,Orgasm]
+[SubCondition_NakedVib,SubCondition_Stealth,NearNPC]
+[SubCondition_NakedVib,SubCondition_Stealth,SubCondition_UseDildo,Orgasm,HandcuffsBack]
+[SubCondition_NakedVib,SubCondition_Stealth]
+[SubCondition_NakedVib,SubCondition_Visible]
+[SubCondition_NakedVib]
+[SubCondition_NakedVibBlindfolded,Action_DrinkWater]
+[SubCondition_NakedVibBlindfolded,Crouching]
+[SubCondition_NakedVibBlindfolded,FPCamera]
+[SubCondition_NakedVibBlindfolded,HandcuffsObject,NormalHandcuffs]
+[SubCondition_NakedVibBlindfolded,HandcuffsObject,Orgasm]
+[SubCondition_NakedVibBlindfolded,HandcuffsObject,Peeing]
+[SubCondition_NakedVibBlindfolded]
+[SubCondition_nakey,!Dashing]
+[SubCondition_nakey,Action_UseBuyMachine]
+[SubCondition_nakey,Cosplay_m_cosplay_general_upper_kubiwa]
+[SubCondition_nakey,Crouching]
+[SubCondition_nakey,KeyedHandcuffs]
+[SubCondition_nakey,Watched,ShowingOff,Action_Dogeza]
+[SubCondition_nakey,Watched,ShowingOff,Action_UseBuyMachine]
+[SubCondition_nakey,Watched,ShowingOff]
+[SubCondition_nakey]
+[SubCondition_no_hiding_cosplay, Naked]
+[SubCondition_no_hiding_cosplay,FrontClosed,BackClosed]
+[SubCondition_no_hiding_cosplay,FrontOpen1,BackClosed,KeyedHandcuffs]
+[SubCondition_no_hiding_cosplay,FrontOpen1,BackClosed,NoHandcuffs]
+[SubCondition_no_hiding_cosplay,FrontOpen1,BackClosed]
+[SubCondition_no_hiding_cosplay,Naked,KeyedHandcuffs]
+[SubCondition_no_hiding_cosplay,Naked]
+[SubCondition_no_hiding_cosplay]
+[SubCondition_panties,Orgasm]
+[SubCondition_panties]
+[SubCondition_PrepareFormula]
+[SubCondition_skirt,SubCondition_vibelow,!(SubCondition_panties)]
+[SubCondition_skirt,SubCondition_vibelow,Action_HipShake,!(SubCondition_panties)]
+[SubCondition_skirt,SubCondition_vibelow,Action_Pinpon,!(SubCondition_panties)]
+[SubCondition_skirt,SubCondition_viberandom,!(SubCondition_panties)]
+[SubCondition_Start,Orgasm,SubCondition_Absorb]
+[SubCondition_Start]
+[SubCondition_startConditions]
+[SubCondition_vibeLow]
+[SubCondition_viberandom,!(SubCondition_panties),!(SubCondition_cskirt)]
+[SubCondition_viberandom,!(SubCondition_panties),!(SubCondition_skirt)]
+[SubCondition_viberandom,Action_Pinpon,!(SubCondition_skirt)]
+[SubCondition_VibratorHiLoRand,Action_IntoWasher]
+[SubCondition_VibratorHiLoRand,KeyedHandcuffs,SubCondition_UseDildo,(Watched,ShowingOff)]
+[SubCondition_VibratorHiLoRand,KeyedHandcuffs,SubCondition_UseDildo,Orgasm]
+[SubCondition_VibratorHiLoRand,KeyedHandcuffs]
+[SubCondition_VibratorHiLoRand,SubCondition_Flashing,!Dashing]
+[VibrationHigh,AdultToy_Vibrator,AdultToy_TitRotor,AdultToy_KuriRotor]
+[VibrationHigh,PistonHigh,AdultToy_Vibrator, AdultToy_EyeMask, AdultToy_TimerHandcuff, AdultToy_TitRotor, AdultToy_KuriRotor, AdultToy_PistonAnal, AdultToy_PistonPussy]
+[VibrationLow,AdultToy_Vibrator,AdultToy_KuriRotor,Item_VibeRemocon==0]
+[VibrationLow,AdultToy_Vibrator,AdultToy_KuriRotor]
+[VibrationLow,AdultToy_Vibrator]
+[VibrationOff,PistonOff,(Action_UseDildoFloorPussy1,Action_UseDildoFloorAnal1,Action_UseDildoWallPussy1,Action_UseDildoWallAnal1,Action_UseDildoWallFella1)]
+[VibrationOff,PistonOff,[!Action_UseDildoFloorPussy1,!Action_UseDildoFloorAnal1,!Action_UseDildoWallPussy1,!Action_UseDildoWallAnal1,!Action_UseDildoWallFella1]]
+Action_AhegaoDoublePiece
+Action_ChikubiRotate
+Action_ConbiniTakeGoods
+Action_Dogeza
+Action_DogTintin
+Action_DrinkWater
+Action_DroppingClothes
+Action_GanimataHip
+Action_GanimataKoshiHeko
+Action_GanimataWalk
+Action_HandOver
+Action_HipShake
+Action_IBalance
+Action_IntoWasher
+Action_KaikyakuFella
+Action_MituasiOnani
+Action_None
+Action_OnaniArmKuri
+Action_OnaniNeGanimata
+Action_PeeDog
+Action_PeeKaikyaku
+Action_PeeStand
+Action_PickUpItem
+Action_Pinpon
+Action_SitDildo
+Action_SitDown
+Action_Tebura
+Action_UseBuyMachine
+Action_UseDildoFloorAnal1
+Action_UseDildoFloorPussy1
+Action_UseDildoWallAnal1
+Action_UseDildoWallFella1
+Action_WakimiseCrouch
+AdultToy_TitRotor
+AdultToy_Vibrator
+AdultToy_Vibrator, AdultToy_TitRotor, AdultToy_KuriRotor
+BackOpen
+Blindfolded
+Bodypaint
+Crouching
+Dashing
+Ecstasy!=1
+Exposed_All
+FrontClosed
+FrontOpen1
+FrontOpen2
+HandcuffsObject
+Item_Dildo>0
+Item_HandcuffKey
+Item_VibeRemocon
+KeyedHandcuffs
+KeyedHandcuffs, Item_HandcuffKey
+MissionCurrCompleted_100018
+Naked
+Naked,isDayTime
+NearNPC
+NoHandcuffs
+Orgasm
+Peeing
+Sitting
+SubCondition_c
+SubCondition_Hard
+SubCondition_no_cosplay
+SubCondition_SkillsReady
+SubCondition_walkcosplay
+TimedHandcuffs
+VibrationHigh
+VibrationLow
+VibrationOff
+Watched
