@@ -26,5 +26,24 @@
     "react-dom": "^18.2.0",
     "reactflow": "^11.10.4",
     "zustand": "^4.4.7"
+  },
+  "build": {
+    "appId": "com.felixchaos.secretflashermanaka-editor",
+    "productName": "塞雷卡自定义任务编辑器",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "src/main.js",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "dir"
+        }
+      ]
+    }
   }
 }
