@@ -46,6 +46,8 @@ release/
 # 测试文件
 test-*.json
 Alleyway_Gambit_*.json
+Alleyway*Gambit*.json
+*_[0-9]*.json
 
 # 文档 - 只保留 README.md
 *报告.md
