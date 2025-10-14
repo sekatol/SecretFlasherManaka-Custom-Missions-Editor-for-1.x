@@ -49,12 +49,11 @@
 
 
 
-## 🚀 快速开始- 
+## 🚀 快速开始-
 
 
 
-### 1. 克隆仓库- 💾 **完整兼容**: 支持导入导出原生 JSON 格式
-
+### 1. 克隆仓库
 
 
 ```bash### 启动应用
@@ -120,11 +119,8 @@ npm run dev
 
 - Electron 应用窗口
 
-### 访问应用- ✅ JSON结构详解
 
-**首次启动后，编辑器将自动打开。**
 
-- ✅ 节点类型说明
 
 ### 4. 构建生产版本
 
@@ -142,9 +138,9 @@ npm run build:electron
 
 
 
-## 📖 使用指南
+## 使用指南
 
-#### 基础节点---
+
 
 ### 基础操作
 
@@ -200,7 +196,7 @@ npm run build:electron
 
 
 
-### 节点类型说明- **SetPlayerPosition**: 设置玩家位置和旋转
+## 节点类型
 
 
 
@@ -215,117 +211,9 @@ npm run build:electron
 | 地点容器 | 📦 | 青色 | 管理任务中的地点/区域（单击高亮，双击选择） |
 | 子条件容器 | 🔧 | 黄色 | 管理可重用的子条件（SubCondition） |
 
-#### 完整指令分类
-### 条件表达式库
 
 
-
-编辑器内置 **177+ 条件表达式**，全部支持中文显示和智能搜索：
-
-**服装系统 (40+ 部件)**### JSON支持
-
-#### 状态类 (13个)
-
-- `Naked` - 裸体状态- 头部、上衣、下装、鞋子、饰品等- 📥 导入现有任务（100+示例文件）
-
-- `Orgasm` - 高潮状态
-
-- `Peeing` - 排尿状态- 支持搜索和分类浏览- 💾 导出标准格式
-
-- `Sitting` - 坐下状态
-
-- `Crouching` - 蹲下状态- 自动检测互斥配置- 🔄 双向转换
-
-- `Blindfolded` - 蒙眼状态
-
-- ... 等- 📍 位置保存
-
-
-
-#### 束缚类 (7个)**成人玩具 (6种)**
-
-- `HandcuffsObject` - 手铐物体
-
-- `TimedHandcuffs` - 计时手铐- Vibrator, TitRotor, KuriRotor---
-
-- `KeyedHandcuffs` - 钥匙手铐
-
-- `NoHandcuffs` - 无手铐- PistonAnal, PistonPussy, EyeMask
-
-- ... 等
-
-## 🎯 节点类型
-
-#### 振动器/活塞强度 (7个)
-
-- `VibrationOff` - 振动器关闭**游戏场景 (12个)**
-
-- `VibrationLow` - 低强度
-
-- `VibrationHigh` - 高强度- Apart, Residence, Park, Mall等| 图标 | 名称 | 用途 |
-
-- `VibrationRandom` - 随机强度
-
-- `PistonMedium` - 活塞中强度|-----|------|------|
-
-- ... 等
-
-**强度等级 (5档)**| 📋 | 任务信息 | 任务元数据 |
-
-#### 陶醉度条件 (8个)
-
-- `Ecstasy==0` - 陶醉度为0- Off, Low, Medium, High, Random| 🌀 | 传送点 | 起始位置 |
-
-- `Ecstasy==1` - 陶醉度最大
-
-- `Ecstasy<0.5` - 陶醉度小于0.5| 🗺️ | 地点容器 | 所有zone定义 |
-
-- ... 等
-
-**条件表达式 (20+)**| 🔀 | 子条件容器 | 所有subcondition定义 |
-
-#### 动作条件 (48个)
-
-- `Action_OnaniNormal` - 普通自慰- 状态、束缚、时间、位置等| ✅ | 检查点 | 任务目标（15个字段） |
-
-- `Action_PeeStand` - 站立排尿
-
-- `Action_SitDildo` - 坐假阳具| 💬 | 对话 | 剧情文本 |
-
-- `Action_UseBuyMachine` - 使用自动售货机
-
-- ... 等#### 使用指令库| 🏁 | 结束 | 任务完成 |
-
-
-
-#### 技能条件 (11个)
-
-- `Skill_AutoSlow` - 自动慢动作
-
-- `Skill_TimeStop` - 时间停止1. 点击输入框旁的 **📚** 按钮---
-
-- `Skill_NoReinforceEffect` - 装备效果无效
-
-- ... 等（使用 `!` 前缀表示关闭）2. 浏览分类或使用搜索
-
-
-
-#### 物品条件 (7个)3. 多选需要的指令## 🛠️ 技术栈
-
-- `Item_Water` - 水
-
-- `Item_Dildo` - 假阳具4. 系统自动检测冲突并高亮警告
-
-- `Item_HandcuffKey` - 手铐钥匙
-
-- `Item_VibeRemocon` - 振动器遥控5. 确认应用到字段- **Electron** 28.1.0 - 桌面应用框架
-
-- ... 等
-
-- **React** 18.2.0 - UI框架
-
-
-## 🏗️ 项目结构---
+## 7.项目结构
 
 
 
@@ -402,7 +290,7 @@ SecretFlasherManaka-Custom-Missions-Editor/
 
 
 
-## 作者
+## 8.作者
 
 晓卡
 
